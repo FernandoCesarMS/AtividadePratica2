@@ -1,5 +1,6 @@
 #include <iostream>
 
+using namespace std;
 class Tempo
 {
 private:
@@ -9,14 +10,28 @@ private:
     int seg;  // Numero de segundos
 
 public:
-    // Contrutores
+    // Contrutores, resposta da b)
     Tempo();
-    Tempo(int dia);
-    Tempo(int dia, int horas);
-    Tempo(int dia, int horas, int min);
-    Tempo(int dia, int horas, int min, int seg);
-    // Destrutor
-    ~Tempo();
+    Tempo(int);
+    Tempo(int, int);
+    Tempo(int, int, int);
+    Tempo(int, int, int, int);
+
+    // basic getters, respostas da d)
+    int getDia() const;
+    int getHora() const;
+    int getMin() const;
+    int getSeg() const;
+    void getTempo();
+
+    //basic setters, respostas da d)
+    void setDia(int);
+    void setHora(int);
+    void setMin(int);
+    void setSeg(int);
 
     // Outros metodos
+    void verifyAttributes(); // Função referente a letra a)
+    void sumTempo(Tempo); // Função referente a letra c)
+    void increaseSecond();
 };
