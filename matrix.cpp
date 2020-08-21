@@ -50,14 +50,23 @@ void Matrix::transpose()
     int auxRows = nCols;
     int auxCols = nRows;
     Matrix aux(auxRows,auxCols);
-    double **auxm = new double *[auxRows];
+    aux.m = new double *[auxRows];
     for(int i = 0; i < auxRows; i++){
-        auxm[i] = new double[auxCols];
+        aux.m[i] = new double [auxCols];
         for(int j = 0; j < auxCols; j++){
-            auxm[i][j] = m[j][i];
+            aux.m[i][j] = m[j][i];
         }
     }
-    *m = *auxm;
+    /*nCols =auxCols;
+    nRows = auxRows;
+    for(int i = 0; i < auxRows; i++){
+        for(int j = 0; j < auxCols; j++){
+            m[i][j] = aux.m[i][j];
+        }
+    }*/
+
+    
+    //m = aux.m;
 }
 
 // imprime o conteudo da matriz
