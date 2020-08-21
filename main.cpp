@@ -9,7 +9,7 @@ int main()
     std::cout << "Numero de linhas de Y:: " << Y.getRows();
     std::cout << "Numero de colunas de Y:: " << Y.getCols();
 
-    std::cout << "Transposta de Y:: " << std::endl;
+    std::cout << std::endl << "Transposta de Y:: " << std::endl;
     Y.transpose();
     Y.print();
     std::cout << "Numero de linhas de Y:: " << Y.getRows();
